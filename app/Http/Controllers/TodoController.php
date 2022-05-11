@@ -19,7 +19,7 @@ class TodoController extends Controller
         Todo::create($form);
         return redirect('/');
     }
-    public static function update(Request $request)
+    public function update(Request $request)
     {
         $this->validate($request, Todo::$rules);
         $form = $request->all();
